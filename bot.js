@@ -11,16 +11,6 @@ channel.send(`سبام كريدت`);
 }, 30)
 })
 
-
-client.on('message',function(message) {
-    let prefix = "s!";
-let args = message.content.split(" ").slice(1).join(" ");
-if(message.content.startsWith(prefix + "حول")) {
-if(!args) return;
-message.channel.send(`#credit <@476577762396864512> ${args}`);
-}
-});
-
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -36,5 +26,26 @@ client.on('message', message => {
     message.channel.sendMessage(args.join(" ")).catch(console.error);
   }
 });
+
+
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+
+
+
+if (command == "حول") {
+let rank = message.guild.member(message.author).roles.find('name', 'OUAIL');
+if (!rank) return message.reply(' ')
+  message.channel.send(args.join("  "))
+    message.delete();
+  }
+});
+
 
 client.login(process.env.BOT_TOKEN);
