@@ -5,7 +5,7 @@ const prefix = ['-'];
 
 client.on('ready', () => {
    console.log(`----------------`);
-   console.log(`Credit Farmm - Script By : Kahrbaa `);
+   console.log(`Credit Farmm - Script By : OUAIL `);
    console.log(`----------------`);
    console.log(`Loadinng`);
    console.log(`Loadinng.`);
@@ -40,7 +40,7 @@ if (message.content === prefix+'spam') {
       let count = 0;
       let ecount = 0;
       for(let x = 0; x < 90000; x++) {
-        message.channel.send(`Credit Spam , سبام كريدت **[ " ${x} " ]**`)
+        message.channel.send(`Credit Spam , سبام كريدت \n **[ " ${x} " ]**`)
           .then(m => {
             count++;
           })
@@ -61,8 +61,8 @@ client.on('message', message => {
 
 
 if (command == "تحدث") {
-let rank = message.guild.member(message.author).roles.find('name', 'Role.Kahrbaa');
-if (!rank) return message.reply(' ')
+let rank = message.guild.member(message.author).roles.find('name', 'OUAIL');
+if (!rank) return message.reply('ما تقدر تزرف الكريدت')
   message.channel.send(args.join("  "))
     message.delete();
   }
