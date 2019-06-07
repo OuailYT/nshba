@@ -61,7 +61,7 @@ client.on('message', message => {
 
 
 if (command == "تحدث") {
-let rank = message.guild.member(message.author).roles.find('name', 'OUAIL');
+let rank = message.guild.member(message.author).roles.find('name', 'SPAMER');
 if (!rank) return message.reply('ما تقدر تزرف الكريدت')
   message.channel.send(args.join("  "))
     message.delete();
